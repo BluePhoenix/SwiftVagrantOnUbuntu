@@ -13,14 +13,8 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
-
-  # Download swift snapshot if it does not exist
-  if !File.exist?('/vagrant/snapshots/swift-2.2-SNAPSHOT-2015-12-01-b-ubuntu14.04.tar.gz')
-    config.vm.provision :shell, path: "download_swift.sh"
-  end
-
   config.vm.provision :shell, path: "bootstrap.sh"
-  
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
