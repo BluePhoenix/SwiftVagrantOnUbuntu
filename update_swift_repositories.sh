@@ -1,6 +1,9 @@
 #!/bin/bash
+# TODO: Modify this script to run on the VM, currently should be run on the host
 
 RepositoriesFolder=$(pwd)"/repositories"
+
+mkdir -p $RepositoriesFolder
 
 if cd "$RepositoriesFolder/swift"; then git pull; else git clone https://github.com/apple/swift.git "$RepositoriesFolder/swift"; fi
 if cd "$RepositoriesFolder/llvm"; then git pull; else git clone https://github.com/apple/swift-llvm.git "$RepositoriesFolder/llvm"; fi
