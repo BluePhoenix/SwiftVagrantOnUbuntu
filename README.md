@@ -15,6 +15,14 @@ vagrant ssh
 swift --version
 ```
 
+## To access Swift REPL ##
+
+```bash
+vagrant up
+vagrant ssh
+swift
+```
+
 ## Target box ##
 [ubunty/trusty64](https://atlas.hashicorp.com/ubuntu/boxes/trusty64)
 
