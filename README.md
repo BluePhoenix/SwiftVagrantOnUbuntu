@@ -4,6 +4,16 @@ This is an attempt to create a Vagrant box set up to run Swift Open Source.
 
 *...This is still a work in progress*
 
+This will create a VM and install Swift on the system. The relevant executables
+will be installed in /usr/bin
+
+Remember you can check the Swift version with:
+
+```bash
+vagrant up
+vagrant ssh
+swift --version
+```
 
 ## Target box ##
 [ubunty/trusty64](https://atlas.hashicorp.com/ubuntu/boxes/trusty64)
